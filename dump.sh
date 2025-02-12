@@ -13,7 +13,7 @@ done
 #getting objects
 objects=$(oledump.py $file | grep -i ': o' | cut -d: -f1)
 for object in $objects; do
-	oledump.py $file -s $object -v > ${filename}/o$object
+	oledump.py $file -s $object -e > ${filename}/o$object
 done
 
 echo "'$file' extracted successfully"
